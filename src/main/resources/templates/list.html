@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<a href="/add"> Add a new Tweet</a><br />
+<table>
+    <tr>
+        <th>Content</th>
+        <th>Posted By</th>
+        <th>Posted Date</th>
+    </tr>
+    <tr th:each="message : ${messages}">
+        <td th:text="${message.content}"></td>
+        <td th:text="${message.postedby}"></td>
+        <td th:text="${message.posteddate}"></td>
+    </tr>
+</table>
+</body>
+</html>
